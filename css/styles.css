@@ -62,3 +62,7 @@ html {
       width: 100%;
   }
 }
+
+input[type="number"]{
+    padding: 12px 5px !important;
+}
