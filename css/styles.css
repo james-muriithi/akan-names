@@ -6,6 +6,7 @@ html {
   --yellow: #fbd23b;
   --dark: #000;
   --green: #206c40;
+  height: 100%;
 }
 
 .navbar-brand {
@@ -43,4 +44,13 @@ html {
   height: 3px;
   background: var(--primary-color);
   margin-bottom: 6px;
+}
+
+#home .description span {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.btn-discover{
+background: var(--primary-color);
 }
