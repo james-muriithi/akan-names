@@ -51,6 +51,14 @@ html {
   color: var(--primary-color);
 }
 
-.btn-discover{
-background: var(--primary-color);
+.btn-discover {
+  background: var(--primary-color);
+}
+
+/* description */
+
+@media screen and (max-width: 752px) {
+  #description .desc {
+      width: 100%;
+  }
 }
