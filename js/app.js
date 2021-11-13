@@ -1,4 +1,43 @@
 // Business Logic
+const akanNames = {
+  Sunday: {
+    male: "Kwasi",
+    female: "Akosua",
+  },
+  Monday: {
+    male: "Kwadwo",
+    female: "Adwoa",
+  },
+  Tuesday: {
+    male: "Kwabena",
+    female: "Abenaa",
+  },
+  Wednesday: {
+    male: "Kwaku",
+    female: "Akua",
+  },
+  Thursday: {
+    male: "Yaw",
+    female: "Yaa",
+  },
+  Friday: {
+    male: "Kofi",
+    female: "Afua",
+  },
+  Saturday: {
+    male: "Kwame",
+    female: "Ama",
+  },
+};
+
+function getDayName(year, month, day) {
+  const date = new Date(year + "/" + month + "/" + day);
+  return date.getDay();
+}
+
+function getAkanName(){
+
+}
 
 // UI Logic
 const akanForm = document.getElementById("akan-form");
@@ -66,5 +105,15 @@ function validateMonth() {
     return true;
   }
   document.querySelector("input#month").classList.add("is-invalid");
+  return false;
+}
+
+function validateYear() {
+  const year = +document.querySelector("input#year").value;
+  const currentYear = new Date().getFullYear();
+  if (year >= 1800 && year <= currentYear) {
+    return true;
+  }
+  document.querySelector("input#year").classList.add("is-invalid");
   return false;
 }
