@@ -60,3 +60,11 @@ function validateDay() {
   return false;
 }
 
+function validateMonth() {
+  const month = +document.querySelector("input#month").value;
+  if (month > 1 && month <= 12) {
+    return true;
+  }
+  document.querySelector("input#month").classList.add("is-invalid");
+  return false;
+}
