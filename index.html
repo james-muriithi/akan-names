@@ -108,18 +108,21 @@
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="day" class="form-label text-muted">Day of birth</label>
                                     <input type="number" class="form-control" id="day">
+                                    <small class="invalid-feedback">Please provide a valid day of birth. i.e from 1 to 31</small>
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="day" class="form-label text-muted">Month of birth</label>
                                     <input type="number" class="form-control" id="month">
+                                    <small class="invalid-feedback">Please provide a valid day of birth. i.e from 1 to 12</small>
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="day" class="form-label text-muted">Year of birth</label>
                                     <input type="number" class="form-control" id="year">
+                                    <small class="invalid-feedback">Please provide a valid day of birth. eg 1980</small>
                                 </div>
                                 <div class="form-group mb-3 col-md-6">
                                     <label for="day" class="form-label text-muted d-block">Gender</label>
-                                    <div class="form-check form-check-inline mt-2">
+                                    <div class="form-check form-check-inline mt-2 is-invalid">
                                         <input class="form-check-input gender" type="radio" name="gender" id="male"
                                             value="male">
                                         <label class="form-check-label" for="male">Male</label>
@@ -128,7 +131,12 @@
                                         <input class="form-check-input gender" type="radio" name="gender" id="female"
                                             value="female">
                                         <label class="form-check-label" for="female">Female</label>
+                                        
                                     </div>
+                                    <div>
+                                        <input class="d-none" type="radio" name="gender" value="">
+                                        <small class="invalid-feedback">Please select a gender</small>
+                                     </div>
                                 </div>
                             </div>
                             <div class="pt-4 pt-md-5 mt-0 mt-md-5 text-center">
