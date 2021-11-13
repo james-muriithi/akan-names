@@ -30,9 +30,13 @@ foo@bar: ~$ git clone https://github.com/james-muriithi/akan-names.git
 ## Design
 [Here is link to the design](https://www.figma.com/file/Qdvqwoo5AQCCqeMYuXiksz/Akan-Names?node-id=0%3A1)
 
+![Design](./screenshots/design.png)
+
 ## Demo
 [Here is link to the site](https://james-muriithi.github.io/akan-names/)
 
+## Screenshot
+![Screenshot](./screenshots/screenshot.png)
 
 ## License
 Copyright (c) 2021 Moringa school
