@@ -18,6 +18,21 @@ Akan names are derived from Ghanian culture. Frequently in Ghana, children are g
 1. Click on discover your akan name button
 1. Displays your Akan Name 🎉
 
+## How to setup
+
+1. Download or clone the project
+```shell
+foo@bar: ~$ git clone https://github.com/james-muriithi/akan-names.git
+```
+2. Navigate to the cloned or downloaded folder
+1. Open index.html file with your browser
+
+## Design
+[Here is link to the design](https://www.figma.com/file/Qdvqwoo5AQCCqeMYuXiksz/Akan-Names?node-id=0%3A1)
+
+## Demo
+[Here is link to the site](https://james-muriithi.github.io/akan-names/)
+
 
 ## License
 Copyright (c) 2021 Moringa school
