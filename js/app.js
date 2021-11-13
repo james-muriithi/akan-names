@@ -30,19 +30,33 @@ const akanNames = {
   },
 };
 
-function getDayName(year, month, day) {
+function getDayIndex(year, month, day) {
   const date = new Date(year + "/" + month + "/" + day);
   return date.getDay();
 }
 
-function getAkanName(){
+function getAkanName(gender, year, month, day) {
+  const dayIndex = getDayIndex(year, month, day);
 
+  let data = {};
+
+  Object.keys(akanNames).forEach((day, index) => {
+    if (+dayIndex === index) {
+      data = {
+        day,
+        name: akanNames[day][gender],
+      };
+    }
+  });
+
+  return data;
 }
 
 // UI Logic
 const akanForm = document.getElementById("akan-form");
 const numberInputs = akanForm.querySelectorAll("input[type='number']");
 const genderInputs = akanForm.querySelectorAll("input[name='gender']");
+const successMessageAlert = document.querySelector(".success-message");
 
 akanForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -58,18 +72,26 @@ function validateForm() {
     }
   });
 
-  const checkedGender = akanForm.querySelectorAll(
-    "input[name='gender']:checked"
-  );
-
-  if (checkedGender.length == 0) {
+  if (!akanForm.querySelector("input[name='gender']:checked")) {
     genderInputs[genderInputs.length - 1].classList.add("is-invalid");
     isFormValid = false;
   }
 
-  isFormValid = validateDay();
-  isFormValid = validateYear();
-  isFormValid = validateMonth();
+  if (!validateYear() || !validateDay() || !validateMonth()) {
+    isFormValid = false;
+  }
+
+  if (isFormValid) {
+    let day = document.querySelector("input#day").value;
+    let month = document.querySelector("input#month").value;
+    let year = document.querySelector("input#year").value;
+    let gender = akanForm.querySelector("input[name='gender']:checked").value;
+
+    const akanData = getAkanName(gender, year, month, day);
+
+    successMessageAlert.textContent = `Your Akan name is ${akanData.name} and born on ${akanData.day} 👨`;
+    successMessageAlert.classList.remove("d-none")
+  }
 
   return isFormValid;
 }
