@@ -23,5 +23,22 @@ function validateForm() {
   if(checkedGender.length == 0){
     genderInputs[genderInputs.length - 1].classList.add('is-invalid')
   }
-  
+
 }
+
+
+function removeInputErrors(){
+    numberInputs.forEach((input) => {
+        input.addEventListener('keydown',function(){
+            this.classList.remove('is-invalid');
+        })
+    });
+
+    genderInputs.forEach((input) => {
+        input.addEventListener('change',function(){
+            genderInputs[genderInputs.length - 1].remove('is-invalid');
+        })
+    })
+}
+
+removeInputErrors();
